@@ -1,0 +1,18 @@
+@use "functions";
+
+
+$grey-500: #4d4f62;
+$grey-400: #6a7178;
+$white: #ffffff;
+$red: #ea5454;
+$cyan: #44d3d2;
+$blue: #549ef2;
+$orange: #fcae4a;
+$background: #fafafa;
+
+$space-40: functions.rem(40);
+$space-32: functions.rem(32);
+$space-24: functions.rem(24);
+$space-16: functions.rem(16);
+$space-8: functions.rem(8);
+

@@ -1,0 +1,69 @@
+@use 'functions';
+
+// Flexbox container
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0, $wrap: wrap) {
+    // Default values
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+    flex-wrap: wrap;
+}
+
+// Center element horizontally and vertically
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Grid container
+@mixin grid($columns: 1fr, $rows: auto, $gap: 0) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    gap: $gap;
+}
+
+// Container with responsive padding
+@mixin container($max-width: functions.rem(1200), $padding: functions.rem(16)) {
+    max-width: $max-width;
+    padding-left: $padding;
+    padding-right: $padding;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// Aspect ratio box
+@mixin aspect-ratio($width: 16, $height: 9) {
+  position: relative;
+  
+  &::before {
+    content: '';
+    display: block;
+    padding-top: ($height / $width) * 100%;
+  }
+  
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Truncate text with ellipsis
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

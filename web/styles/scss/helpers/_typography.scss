@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@use 'functions';
+
+@mixin text-preset-1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: functions.rem(36);
+    line-height: 140%;
+    letter-spacing: functions.rem(0.25);
+}
+
+@mixin text-preset-2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: functions.rem(36);
+    line-height: 140%;
+    letter-spacing: functions.rem(0.25);
+}
+
+@mixin text-preset-3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: functions.rem(20);
+    line-height: 135%;
+    letter-spacing: functions.rem(0);
+}
+
+@mixin text-preset-4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: functions.rem(15);
+    line-height: 140%;
+    letter-spacing: functions.rem(0);
+}
+
+@mixin text-preset-5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: functions.rem(13);
+    line-height: 160%;
+    letter-spacing: functions.rem(0);
+}

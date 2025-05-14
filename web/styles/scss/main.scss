@@ -1,0 +1,42 @@
+/* Example of using helpers without namespace
+@use './helpers' as *;  // Import all abstracts with no namespace
+
+.button {
+  padding: $spacing-sm $spacing-md;
+  background-color: $color-primary;
+  border-radius: rem(4);
+  color: white;
+  
+  &:hover {
+    background-color: color-lighten($color-primary, 10%);
+  }
+  
+  @include breakpoint(md) {
+    padding: $spacing-md $spacing-lg;
+  }
+  
+  &.button--centered {
+    @include flex-center;
+  }
+}
+*/
+
+/* Example of using helpers with namespace
+@use './helpers';  // Import with 'helpers' namespace
+
+.button {
+  padding: helpers.$spacing-sm helpers.$spacing-md;
+  background-color: helpers.$color-primary;
+  border-radius: helpers.rem(4);
+  
+  @include helpers.breakpoint(md) {
+    padding: helpers.$spacing-md helpers.$spacing-lg;
+  }
+}
+*/
+
+html, body, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
